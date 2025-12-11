@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </div>
 
-       <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 lg:p-12 text-white text-center">
+        <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 lg:p-12 text-white text-center">
   <h3 className="text-2xl lg:text-3xl font-bold mb-4">
     Kami Melayani Pemasangan CBN untuk Bandung dan Sekitarnya
   </h3>
@@ -100,3 +100,6 @@ export default function About() {
     Hubungi Kami Sekarang
   </a>
 </div>
+    </section>
+  );
+}
