@@ -7,7 +7,7 @@ export default function Header() {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/628193994902', '_blank');
+    window.open('https://wa.me/6281939949902', '_blank');
   };
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
