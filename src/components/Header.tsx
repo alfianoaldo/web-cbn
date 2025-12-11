@@ -9,7 +9,7 @@ export default function Header() {
   const openWhatsApp = () => {
     window.open('https://wa.me/628193994902', '_blank');
   };
-
++62 819-3994-9902
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
