@@ -148,15 +148,20 @@ export default function Pricing() {
                     )}
                   </div>
 
-                  <button
-                    onClick={() => {
-                      const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
-                      window.open(`https://wa.me/6281939949902?text=${encodeURIComponent(message)}`, '_blank');
-                    }}
-                    className={`w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
-                  >
-                    Hubungi via WhatsApp
-                  </button>
+                  {(() => {
+                    const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
+                    const whatsappUrl = `https://api.whatsapp.com/send/?phone=6281939949902&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+                    return (
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`block text-center w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
+                      >
+                        Hubungi via WhatsApp
+                      </a>
+                    );
+                  })()}
                 </div>
               </div>
             );

@@ -6,15 +6,8 @@ export default function Header() {
     }
   };
 
-  // Teks pesan WA yang akan di-encode
-  const whatsappText = 'Halo Admin, saya ingin mendaftar layanan internet CBN. Mohon informasinya untuk paket yang tersedia. Terima kasih.';
-  // URL lengkap WhatsApp dengan nomor dan teks yang sudah di-encode
-  const whatsappUrl = `https://wa.me/6281939949902?text=${encodeURIComponent(whatsappText)}`;
-
-  const openWhatsApp = () => {
-    // Menggunakan window.open dengan URL yang sudah benar
-    window.open(whatsappUrl, '_blank');
-  };
+  const whatsappMessage = 'Saya ingin mendaftar CBN, apakah bisa info paket internetnya';
+  const whatsappUrl = `https://api.whatsapp.com/send/?phone=6281939949902&text=${encodeURIComponent(whatsappMessage)}&type=phone_number&app_absent=0`;
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
@@ -44,10 +37,8 @@ export default function Header() {
             </a>
           </nav>
           
-          {/* TOMBOL WHATSAPP */}
-          {/* Mengganti <button> menjadi <a> untuk link eksternal yang lebih semantik */}
           <a
-            href={whatsappUrl} // Menggunakan URL WhatsApp yang sudah benar
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200"
