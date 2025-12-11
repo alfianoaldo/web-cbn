@@ -1,6 +1,4 @@
-import { Wifi, Mail, Phone, MapPin } from 'lucide-react';
-
-import { Mail, MapPin, Phone, Wifi } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,16 +12,8 @@ export default function Footer() {
 
           {/* Kolom 1: Logo & Kontak */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              {/* Ini adalah perbaikan untuk tag Wifi yang sebelumnya tidak tertutup */}
-              <div className="flex-shrink-0 p-1 bg-cyan-600 rounded-full">
-                <Wifi className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                {/* Asumsi: Ini adalah bagian logo utama */}
-                {/* Ganti dengan <img /> jika Anda memiliki file logo di public folder */}
-                <h3 className="text-xl font-bold">CBN Fiber</h3>
-              </div>
+            <div className="mb-4">
+              <img src="/logo-cbn.png" alt="CBN Logo" className="h-12" />
             </div>
             
             <p className="text-gray-400 mb-4 max-w-md">
