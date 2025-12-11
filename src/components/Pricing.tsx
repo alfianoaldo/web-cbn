@@ -168,9 +168,11 @@ export default function Pricing() {
           })}
         </div>
 
- 
+        
             </li>
           </ul>
- 
+        </div>
+      </div>
+    </section>
   );
 }
