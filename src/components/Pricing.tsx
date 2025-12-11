@@ -168,24 +168,9 @@ export default function Pricing() {
           })}
         </div>
 
-        <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
-          <h4 className="font-bold text-gray-900 mb-3 text-lg">Syarat & Ketentuan:</h4>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Biaya Pasang Baru (PSB) Diskon 70% menjadi Rp. 150.000 per sambungan belum termasuk PPN</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Semua paket sudah termasuk unlimited kuota internet</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Promo Speedboost berlaku selama 6 bulan untuk paket CBN Fiber 30 dan 50</span>
+ 
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
+ 
   );
 }
