@@ -151,7 +151,7 @@ export default function Pricing() {
                   <button
                     onClick={() => {
                       const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
-                      window.open(`https://wa.me/628193994902?text=${encodeURIComponent(message)}`, '_blank');
+                      window.open(`https://wa.me/6281939949902?text=${encodeURIComponent(message)}`, '_blank');
                     }}
                     className={`w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
                   >
