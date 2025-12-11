@@ -28,6 +28,9 @@ export default function About() {
     'Harga Paket Kompetitif'
   ];
 
+  // URL WhatsApp dengan nomor dan teks yang di-encode
+  const whatsappUrl = "https://wa.me/6281939949902?text=Saya%20ingin%20mendaftar%20CBN%2C%20apakah%20bisa%20info%20paket%20internetnya";
+
   return (
     <section id="layanan" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,37 +87,27 @@ export default function About() {
           </div>
         </div>
 
-                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 lg:p-12 text-white text-center">
-
+        {/* BAGIAN CALL TO ACTION DENGAN TOMBOL WHATSAPP */}
+        <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 lg:p-12 text-white text-center">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-
             Kami Melayani Pemasangan CBN untuk Bandung dan Sekitarnya
-
           </h3>
-
           <p className="text-cyan-100 text-lg mb-6 max-w-3xl mx-auto">
-
             Jika Anda ingin daftar CBN Fiber Bandung, silakan hubungi kami sekarang. Kami menyediakan pilihan paket internet CBN terbaru yang dapat disesuaikan dengan kebutuhan Anda.
-
           </p>
-
-          <button
-
-            onClick={() => {
-
-              const element = document.getElementById('kontak');
-
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-
-            }}
-
-            className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-
+          
+          {/* TOMBOL WHATSAPP */}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200"
           >
-
             Hubungi Kami Sekarang
-
-          </button>
+          </a>
+          
+        </div>
+      </div>
     </section>
   );
 }
