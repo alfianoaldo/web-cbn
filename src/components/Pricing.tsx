@@ -75,6 +75,10 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {packages.map((pkg, index) => {
             const Icon = pkg.icon;
+            // Pesan WA disesuaikan per paket
+            const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=6281939949902&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+            
             return (
               <div
                 key={index}
@@ -148,28 +152,25 @@ export default function Pricing() {
                     )}
                   </div>
 
-                  {(() => {
-                    const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
-                    const whatsappUrl = `https://api.whatsapp.com/send/?phone=6281939949902&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
-                    return (
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`block text-center w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
-                      >
-                        Hubungi via WhatsApp
-                      </a>
-                    );
-                  })()}
+                  {/* Tombol Hubungi via WhatsApp */}
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block text-center w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
+                  >
+                    Hubungi via WhatsApp
+                  </a>
+                  
                 </div>
               </div>
             );
           })}
         </div>
-
         
-          </ul>
-        </div
+        {/* BAGIAN SYARAT & KETENTUAN DIHAPUS DARI SINI */}
+
+      </div>
+    </section>
   );
 }
