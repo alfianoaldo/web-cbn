@@ -13,8 +13,7 @@ export default function Footer() {
                 <Wifi className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-bold text-white">CBN</span>
-                <span className="text-2xl font-light text-cyan-400">Fiber</span>
+                <img src="/logo-cbn.png" alt="CBN Logo" className="h-12" />
               </div>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
