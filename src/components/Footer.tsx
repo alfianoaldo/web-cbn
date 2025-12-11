@@ -5,11 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-2 rounded-lg">
+   
                 <Wifi className="w-6 h-6 text-white" />
               </div>
               <div>
