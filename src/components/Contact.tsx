@@ -25,7 +25,7 @@ export default function Contact() {
                   <h4 className="font-semibold mb-1">Telepon / WhatsApp</h4>
                   <p className="text-cyan-100">Hubungi Customer Service kami</p>
                   <a href="tel:+628111234567" className="text-white font-bold hover:text-cyan-200 transition-colors">
-                    +62 811-1234-567
+                    +62819-3994-9902
                   </a>
                 </div>
               </div>
