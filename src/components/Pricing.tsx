@@ -167,8 +167,6 @@ export default function Pricing() {
             );
           })}
         </div>
-        
-        {/* BAGIAN SYARAT & KETENTUAN DIHAPUS DARI SINI */}
 
       </div>
     </section>
