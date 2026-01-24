@@ -75,6 +75,10 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {packages.map((pkg, index) => {
             const Icon = pkg.icon;
+            // Pesan WA disesuaikan per paket
+            const message = `Saya tertarik dengan paket ${pkg.name} (${pkg.price}/bulan)`;
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=6281939949902&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+            
             return (
               <div
                 key={index}
@@ -148,38 +152,22 @@ export default function Pricing() {
                     )}
                   </div>
 
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById('kontak');
-                      if (element) element.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className={`w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
+                  {/* Tombol Hubungi via WhatsApp */}
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block text-center w-full bg-gradient-to-r ${pkg.borderColor} text-white py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
                   >
-                    Pilih Paket
-                  </button>
+                    Hubungi via WhatsApp
+                  </a>
+                  
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
-          <h4 className="font-bold text-gray-900 mb-3 text-lg">Syarat & Ketentuan:</h4>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Biaya Pasang Baru (PSB) Diskon 70% menjadi Rp. 150.000 per sambungan belum termasuk PPN</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Semua paket sudah termasuk unlimited kuota internet</span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <span className="text-blue-600 mt-1">•</span>
-              <span>Promo Speedboost berlaku selama 6 bulan untuk paket CBN Fiber 30 dan 50</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
   );
